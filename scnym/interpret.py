@@ -1033,7 +1033,7 @@ class ExpectedGradient(object):
 
         target_bidx = adata.obs[self.cell_type_col] == target
         if source in self.background_vals:
-            source_bidx = np.ones(adata.shape[0], dtype=np.bool)
+            source_bidx = np.ones(adata.shape[0], dtype=bool)
             # ensure target cells aren't in the source data
             source_bidx[target_bidx] = False
         else:

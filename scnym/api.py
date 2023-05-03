@@ -437,7 +437,7 @@ def scnym_train(
         # set all samples for training
         train_adata = adata
         # set no samples as `target_bidx`
-        target_bidx = np.zeros(adata.shape[0], dtype=np.bool)
+        target_bidx = np.zeros(adata.shape[0], dtype=bool)
     else:
         print(f"{n_unlabeled} unlabeled observations found.")
         print(
